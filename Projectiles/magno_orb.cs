@@ -87,7 +87,7 @@ namespace ArchaeaMod.Projectiles
                 Main.projectile[Proj1].netUpdate = true;
                 //  if (Main.netMode == 1) NetMessage.SendData(27, -1, -1, null, Proj1);
             }
-            Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/IceBeamChargeShot"), projectile.position);
+            Main.PlaySound(2, projectile.position, 14);
         }
 
         public void SyncProj(int netID)
