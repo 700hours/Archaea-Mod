@@ -468,7 +468,7 @@ namespace ArchaeaMod.NPCs
                         else
                         {
                             npc.velocity = Distance(null, angleToPlayer, 8f) * 1.25f;
-                            Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/blast"), npc.Center);
+                            Main.PlaySound(2, npc.Center, 10);
                         }
                         npc.netUpdate = true;
                     }
@@ -524,7 +524,7 @@ namespace ArchaeaMod.NPCs
             {
                 if (!soundOnce)
                 {
-                    Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/blast"), npc.Center);
+                    Main.PlaySound(2, npc.Center, 10);
                     soundOnce = true;
                 }
                 timer2 = 0;
