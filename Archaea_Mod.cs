@@ -24,34 +24,12 @@ namespace ArchaeaMod
             AddBossHeadTexture(magnoHead);
         }
 
-        int oldID, ID;
-        int[] plrID = new int[255];
         public override void UpdateMusic(ref int music, ref MusicPriority priority)
         {
-            foreach (Player p in Main.player)
+            if (Main.netMode < 2 && Main.LocalPlayer.active && !Main.gameMenu && Main.LocalPlayer.GetModPlayer<TestPlayer>().MagnoZone)
             {
-                if (p.active && !p.dead && p != null)
-                {
-                    oldID = plrID[ID];
-                    plrID[ID] = p.whoAmI;
-                    if (oldID == p.whoAmI)
-                        break;
-                    if (ID < plrID.Length)
-                        ID++;
-                    else ID = 0;
-                }
-            }
-            foreach (int i in plrID)
-            {
-                if (Main.player[plrID[i]].active && !Main.player[plrID[i]].dead && Main.player[plrID[i]] != null)
-                {
-                    if (Main.myPlayer == Main.player[plrID[i]].whoAmI && Main.player[plrID[i]].GetModPlayer<ArchaeaPlayer>().MagnoZone)
-                    {
-                        music = GetSoundSlot(SoundType.Music, "Sounds/Music/Magno_Biome_1");
-                        priority = MusicPriority.BiomeHigh;
-                        break;
-                    }
-                }
+                music = GetSoundSlot(SoundType.Music, "Sounds/Music/Magno_Biome_1");
+                priority = MusicPriority.BiomeHigh;
             }
         }
     }
