@@ -59,7 +59,7 @@ namespace ArchaeaMod.Items.Armors
                 if (player.ownedProjectileCounts[mod.ProjectileType("magno_minion")] < player.maxMinions && player.numMinions < player.maxMinions)
                 {
                     player.AddBuff(mod.BuffType("magno_summon"), 18000, false);
-                    Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/conjure"), player.Center);
+                    Main.PlaySound(2, player.Center, 20);
                     projMinion = Projectile.NewProjectile(player.position, Vector2.Zero, mod.ProjectileType("magno_minion"), 5, 3f, player.whoAmI, 0f, 0f);
                     player.maxMinions += 1;
                 }

@@ -44,7 +44,7 @@ namespace ArchaeaMod.Items.Armors
                     {
                         if (ticks % 60 == 0 && Main.rand.NextFloat() >= .67f)
                         {
-                            Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/PowerBeamChargeShot"), player.Center);
+                         // Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/PowerBeamChargeShot"), player.Center);
                             Proj1 = Projectile.NewProjectile(n.position + new Vector2(n.position.X + n.width / 2, n.position.Y + n.height / 2), n.velocity, mod.ProjectileType<shock_spark>(), 10 + Main.rand.Next(-2, 5), 0f, player.whoAmI, n.position.X + n.width / 2, n.position.Y + n.height / 2);
                             Projectile projectile = Main.projectile[Proj1];
                             projectile.position = n.position + new Vector2(n.width / 2, n.height / 2);

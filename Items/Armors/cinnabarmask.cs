@@ -57,7 +57,7 @@ namespace ArchaeaMod.Items.Armors
             
             if (ticks % 60 == 0)
             {
-                int newProj = Projectile.NewProjectile(player.Center, Vector2.Zero, mod.ProjectileType("cinnabar_spore"), 14, 4f, player.whoAmI, x, y);
+                int newProj = Projectile.NewProjectile(player.Center, Vector2.Zero, mod.ProjectileType("cinnabar_spore"), 14, 0f, player.whoAmI, x, y);
             }
         }
 
