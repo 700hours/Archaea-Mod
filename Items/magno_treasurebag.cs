@@ -32,6 +32,7 @@ namespace ArchaeaMod.Items
         {
             player.QuickSpawnItem(ItemID.GoldCoin, 5);
             player.QuickSpawnItem(mod.ItemType<magno_shieldacc>(), 1);
+            player.QuickSpawnItem(mod.ItemType<Vanity.magno_mask>(), 1);
             player.QuickSpawnItem(mod.ItemType<Tiles.magno_ore>(), Main.rand.Next(34, 68));
             player.QuickSpawnItem(mod.ItemType<magno_fragment>(), Main.rand.Next(12, 24));
         }
