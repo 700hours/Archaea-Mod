@@ -1,7 +1,7 @@
 author = Archaea Devs
-version = 0.1
+version = 0.1.0.1
 displayName = Archaea Mod
-homepage = 
+homepage = http://www.circleprefect.com/modpage
 hideCode = true
 hideResources = true
 includeSource = false
