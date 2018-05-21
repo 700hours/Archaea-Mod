@@ -30,11 +30,6 @@ namespace ArchaeaMod.Items.Summons
         }
         public override void AddRecipes()
         {
-            ModRecipe recipeT = new ModRecipe(mod);
-            recipeT.AddIngredient(9);
-            recipeT.SetResult(this, 1);
-            recipeT.AddRecipe();
-            // -- //
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Bone, 15);
             recipe.AddIngredient(mod.ItemType<magno_core>(), 5);
