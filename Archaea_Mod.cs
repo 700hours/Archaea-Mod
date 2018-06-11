@@ -26,7 +26,7 @@ namespace ArchaeaMod
 
         public override void UpdateMusic(ref int music, ref MusicPriority priority)
         {
-            if (Main.netMode < 2 && Main.LocalPlayer.active && !Main.gameMenu && Main.LocalPlayer.GetModPlayer<TestPlayer>().MagnoZone)
+            if (Main.netMode < 2 && Main.LocalPlayer.active && !Main.gameMenu && Main.LocalPlayer.GetModPlayer<ArchaeaPlayer>().MagnoZone)
             {
                 music = GetSoundSlot(SoundType.Music, "Sounds/Music/Magno_Biome_1");
                 priority = MusicPriority.BiomeHigh;
