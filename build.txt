@@ -5,5 +5,5 @@ homepage = http://www.circleprefect.com/modpage
 hideCode = true
 hideResources = true
 includeSource = false
-buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, *.ini
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, *.ini, *.config
 includePDB = false
